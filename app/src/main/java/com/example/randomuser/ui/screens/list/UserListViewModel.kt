@@ -44,28 +44,7 @@ class UserListViewModel @Inject constructor(
         addRandomUser()
     }
 
-    fun deleteUser(userId: String) {
-        viewModelScope.launch {
-            deleteUserUseCase(userId).onSuccess {
-                _users.value = _users.value.filterNot { it.uid == userId }
-            }.onFailure {
-                _error.value = UserListError.DeleteFailed
-            }
-        }
-    }
-
-    private fun loadUsersFromDb() {
-        viewModelScope.launch {
-            try {
-                val dbUsers = getAllUsersUseCase()
-                _users.value = dbUsers
-            } catch (_: Exception) {
-                _error.value = UserListError.LoadFailed
-            }
-        }
-    }
-
-    private fun addRandomUser(results: Int = 1) {
+    fun addRandomUser(results: Int = 1) {
         viewModelScope.launch {
             if (!networkChecker.isOnline()) {
                 _error.value = UserListError.NoInternet
@@ -80,6 +59,31 @@ class UserListViewModel @Inject constructor(
                 _error.value = UserListError.FetchFailed
             }
             _isLoadingMore.value = false
+        }
+    }
+
+    fun deleteUser(userId: String) {
+        viewModelScope.launch {
+            deleteUserUseCase(userId).onSuccess {
+                _users.value = _users.value.filterNot { it.uid == userId }
+            }.onFailure {
+                _error.value = UserListError.DeleteFailed
+            }
+        }
+    }
+
+    fun refreshUsersFromDb() {
+        loadUsersFromDb()
+    }
+
+    private fun loadUsersFromDb() {
+        viewModelScope.launch {
+            try {
+                val dbUsers = getAllUsersUseCase()
+                _users.value = dbUsers
+            } catch (_: Exception) {
+                _error.value = UserListError.LoadFailed
+            }
         }
     }
 
