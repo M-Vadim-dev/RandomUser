@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">RandomUser</string>
+
+    <string name="back">Back</string>
+    <string name="generate_user">Generate user</string>
+    <string name="generate">Generate</string>
+
+    <string name="select_gender">Select Gender</string>
+    <string name="select_nationality">Select Nationality</string>
+    <string name="open_profile">Open profile</string>
+    <string name="delete">Delete</string>
+
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_any">Any</string>
+
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="email">E-mail</string>
+    <string name="phone">Phone</string>
+    <string name="location">Location</string>
+
+    <string name="no_internet">No internet connection</string>
+    <string name="error_no_data">No data</string>
+    <string name="error_user_not_found">User not found</string>
+    <string name="error_fetch_users">Error fetching users</string>
+    <string name="error_load_users">Error loading users</string>
+    <string name="error_delete_user">Failed to delete user</string>
+    <string name="error_id_not_provided">User ID not provided</string>
+    <string name="error_load_failed">Failed to load user from database</string>
+
+    <string name="nat_au">Australia</string>
+    <string name="nat_br">Brazil</string>
+    <string name="nat_ca">Canada</string>
+    <string name="nat_ch">Switzerland</string>
+    <string name="nat_de">Germany</string>
+    <string name="nat_dk">Denmark</string>
+    <string name="nat_es">Spain</string>
+    <string name="nat_fi">Finland</string>
+    <string name="nat_fr">France</string>
+    <string name="nat_gb">United Kingdom</string>
+    <string name="nat_ie">Ireland</string>
+    <string name="nat_in">India</string>
+    <string name="nat_ir">Iran</string>
+    <string name="nat_mx">Mexico</string>
+    <string name="nat_nl">Netherlands</string>
+    <string name="nat_no">Norway</string>
+    <string name="nat_nz">New Zealand</string>
+    <string name="nat_rs">Serbia</string>
+    <string name="nat_tr">Turkey</string>
+    <string name="nat_ua">Ukraine</string>
+    <string name="nat_us">United States</string>
+</resources>
